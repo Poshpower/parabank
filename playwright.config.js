@@ -9,7 +9,7 @@ testDir: './tests',
   fullyParallel: true,
   forbidOnly: Boolean(process.env.CI),
   retries: process.env.CI ? 2 : 0,
-  reporter: 'list',
+  reporter:'list',
   use: {
     baseURL: process.env.BASE_URL || '',
     trace: 'retain-on-failure',
@@ -23,4 +23,3 @@ testDir: './tests',
     },
   ],
 });
-
