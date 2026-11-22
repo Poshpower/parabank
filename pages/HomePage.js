@@ -18,4 +18,8 @@ export class HomePage {
   async goto() {
     await this.page.goto('/parabank/index.htm');
   }
+
+  async clickRegister() {
+    await this.registerLink.click();
+  }
 }

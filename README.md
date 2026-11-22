@@ -29,4 +29,7 @@ It runs on branch pushes, pull requests to `main` or `master`, and manual dispat
 
 The home-page suite covers main sections, navigation, and refresh. It does not require an account or modify customer data.
 
+The registration suite creates a real account in the configured deployment on each run and checks form validation. `utils/registrationData.js` uses Faker.js to generate test data. Generated credentials are not saved; provide login-test credentials manually.
+Boundary, duplicate-username, optional-phone, special-character, and credential-space scenarios can also create accounts. The first-name, last-name, username, and password inputs accept 51 characters while typing, but registration currently rejects values longer than 30 characters for names or 20 for credentials. The demo misleadingly reports these overlength values as an existing username. The credential-space scenarios require leading and trailing spaces to be rejected; the public demo currently accepts them, so these checks fail. The whitespace-only scenarios document the demo's observed validation behavior rather than recommending it.
+
 Do not store credentials or other sensitive test data in the repository.
